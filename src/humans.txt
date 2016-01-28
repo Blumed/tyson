@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    I am the man with the master plan. -- <role> -- @@crockman.*fivethousand
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    Jekyll, Lanyon/Poole, HTML5 Boilerplate
+    Yeoman, Jekyllized
