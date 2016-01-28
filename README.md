@@ -1,3 +1,3 @@
-# Tyson Crocket
+# Tyson
 
 [Describe the project.]
