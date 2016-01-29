@@ -12,11 +12,12 @@
         width: 31.4%;
         padding-bottom: 31.4%;
         margin-bottom: 3%;
+        border: 5px solid black;
         //transition: all .3s ease-in-out;
         &:hover {
-            background: $pink;
+            //background: $pink;
             img {
-                opacity: 0;
+                opacity: 1;
             }
             .inner {
                 opacity: 1;
@@ -27,10 +28,11 @@
             border-radius: 0;
             position: absolute;
             width: 100%;
+            opacity:0;
             //max-height: 426px;
         }
         .inner {
-            opacity: 0;
+            opacity: 1;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -40,7 +42,7 @@
             width: 9rem;
             @extend .text-center;
             & > * {
-                color: $gray;
+                color: black;
             }
             .page-title {
               text-transform: uppercase;
@@ -62,3 +64,6 @@
 
     }
 }
+// .wrap .block:hover {
+//     background:red;
+// }

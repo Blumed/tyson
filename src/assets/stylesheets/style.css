@@ -916,7 +916,10 @@ a.pagination-item:hover {
   position: fixed;
   top: 1rem;
   left: 1rem;
-  display: inline-block; }
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-block;
+  z-index: 10; }
   .logo img {
     width: 50px; }
 
@@ -1071,21 +1074,21 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
     position: relative;
     width: 31.4%;
     padding-bottom: 31.4%;
-    margin-bottom: 3%; }
-    .blocks .block:hover {
-      background: #efbba9; }
-      .blocks .block:hover img {
-        opacity: 0; }
-      .blocks .block:hover .inner {
-        opacity: 1;
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-                transition: opacity 0.35s, transform 0.35s; }
+    margin-bottom: 3%;
+    border: 5px solid black; }
+    .blocks .block:hover img {
+      opacity: 1; }
+    .blocks .block:hover .inner {
+      opacity: 1;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+              transition: opacity 0.35s, transform 0.35s; }
     .blocks .block img {
       border-radius: 0;
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      opacity: 0; }
     .blocks .block .inner {
-      opacity: 0;
+      opacity: 1;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -1096,7 +1099,7 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
               transition: opacity 0.35s, transform 0.35s;
       width: 9rem; }
       .blocks .block .inner > * {
-        color: #eff2f6; }
+        color: black; }
       .blocks .block .inner .page-title {
         text-transform: uppercase;
         letter-spacing: 2px;

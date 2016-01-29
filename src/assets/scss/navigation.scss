@@ -17,7 +17,10 @@
   position:fixed;
   top:1rem;
   left:1rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display:inline-block;
+  z-index:10;
       img{
         width:50px;
       }
