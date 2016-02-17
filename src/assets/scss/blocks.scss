@@ -1,11 +1,11 @@
 /*
 * Blocks
 */
-.blocks {
-    width:100%;
-  margin-top: 50%;
-          transform: translate(0, -50%);
 
+.blocks {
+    width: 100%;
+    margin-top: 5.5rem;
+    // transform: translate(0, -50%);
     .block {
         float: left;
         position: relative;
@@ -14,21 +14,21 @@
         margin-bottom: 3%;
         border: 5px solid black;
         //transition: all .3s ease-in-out;
-        &:hover {
-            //background: $pink;
-            img {
-                opacity: 1;
-            }
-            .inner {
-                opacity: 1;
-                transition: opacity 0.35s, transform 0.35s;
-            }
-        }
+        // &:hover {
+        //     //background: $pink;
+        //     img {
+        //         opacity: 1;
+        //     }
+        //     .inner {
+        //         opacity: 1;
+        //         transition: opacity 0.35s, transform 0.35s;
+        //     }
+        // }
         img {
             border-radius: 0;
             position: absolute;
             width: 100%;
-            opacity:0;
+            opacity: 0;
             //max-height: 426px;
         }
         .inner {
@@ -45,25 +45,46 @@
                 color: black;
             }
             .page-title {
-              text-transform: uppercase;
-              letter-spacing: 2px;
-              line-height: 32px;
-              font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: 32px;
+                font-size: 20px;
             }
             .page-sub-title {
-              text-transform: lowercase;
-              letter-spacing: 1px;
-              font: italic 400 25px/1.29 "adobe-caslon-pro",serif;
+                text-transform: lowercase;
+                letter-spacing: 1px;
+                font: italic 400 25px/1.29 "adobe-caslon-pro", serif;
             }
-        hr {
-            height: 2px;
-            width: 40px;
-            margin: .75rem auto;
+            hr {
+                height: 2px;
+                width: 40px;
+                margin: .75rem auto;
+            }
         }
-        }
-
     }
 }
-// .wrap .block:hover {
-//     background:red;
-// }
+@media #{$tablet} {
+  //Home
+  .blocks {
+      .block {
+          width: 48.5%;
+          padding-bottom: 48.5%;
+          &:nth-child(odd) {
+              margin-right: 3%;
+          }
+          img {
+              width: 100%;
+          }
+      }
+  }
+  }
+@media #{$phone} {
+  .blocks {
+      //background: green;
+      .block {
+          width: 100%;
+          padding-bottom: 100%;
+          display: block;
+      }
+  }
+}

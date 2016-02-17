@@ -1,0 +1,21 @@
+.page {
+	@xextend .clear;
+}
+aside {
+	@extend .is-left;
+
+}
+section {
+	@extend .is-left;
+	.slider {
+		.slide {
+			&.panel-1 {
+				background: url(../images/film/slide-1.png) no-repeat center center fixed;
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-size: cover;
+			}
+		}
+	}
+}

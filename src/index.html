@@ -4,7 +4,7 @@ title: Home
 ---
 <section>
   <div class="blocks clear">
-    {% assign sorted = site.cat | sort: 'order' %}
+    {% assign sorted = site.category | sort: 'order' %}
         {% for page in sorted %}
         <a class="block" href="{{ page.url }}">
         {% if page.img %}
@@ -14,7 +14,6 @@ title: Home
         {% endif %}
             <div class="inner">
                 <h4 class="page-sub-title">{{ page.category }}</h4>
-                <hr>
             </div>
         </a>
         {% endfor %}

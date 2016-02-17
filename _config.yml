@@ -49,5 +49,5 @@ gems:
  - jekyll-gist
 
 collections:
- cat:
+ category:
   output: true

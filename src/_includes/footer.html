@@ -11,8 +11,12 @@
     <!--<![endif]-->
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    {% if page.page  == true %}
+    <script src="/assets/javascript/vendor/slick/slick.min.js"></script>
+    <script src="/assets/javascript/slick.js"></script>
+    {% endif %}
     <!-- build:js /assets/javascript/all.min.js -->
-    <script src="assets/javascript/slideshow.js"></script>
+    <!--<script src="assets/javascript/slideshow.js"></script>-->
     <script src="/assets/javascript/main.js"></script>
     <!-- endbuild -->
   </body>

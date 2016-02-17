@@ -9,9 +9,8 @@
 </a>
   <nav>
       <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
-<!--       {% assign pages_list = site.cat | sort: "order" %}
-      {% assign pages_list = site.pages | sort: "order" %} -->
-      {% capture page_list %}{{ site.pages }}{{ site.cat }}{% endcapture %}
+      {% assign pages_list = site.pages | sort: "order" %}
+<!--       {% capture site-pages %}{{ site.pages }}{% endcapture %} -->
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
@@ -19,6 +18,17 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+      <!-- {% capture page_list %}{{ site.cat }}{% endcapture %} -->
+      {% assign cat_list = site.category | sort: "order" %}
+<!--       {% capture site-pages %}{{ site.pages }}{% endcapture %} -->
+      {% for node in cat_list %}
+        {% if node.category != null %}
+          {% if node.layout == "page" %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.category }}</a>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% capture page_list %}{{ site.cat }}{% endcapture %}
 
     </nav>
 </div>
