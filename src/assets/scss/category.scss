@@ -3,18 +3,23 @@
 }
 aside {
 	@extend .is-left;
-
+	padding: 1rem;
+	.slider-nav {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		bottom: 0;
+	}
 }
 section {
 	@extend .is-left;
 	.slider {
 		.slide {
-			&.panel-1 {
-				background: url(../images/film/slide-1.png) no-repeat center center fixed;
+			height: 100vh;
+			img {
 				width: 100%;
+				object-fit: cover;
 				height: 100%;
-				display: block;
-				background-size: cover;
 			}
 		}
 	}

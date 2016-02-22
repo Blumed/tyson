@@ -3,19 +3,36 @@ layout: page
 title: title
 category: Film
 page: true
+discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptas necessitatibus, laboriosam voluptate. Quis dignissimos minima exercitationem, earum inventore incidunt fugiat nesciunt ad necessitatibus, ipsa molestiae accusamus sapiente. Quo nostrum nihil, eveniet aut?
 img: http://placehold.it/226x226
 order: 1
 ---
-<aside class="is-3-of-3">
+<aside class="is-1-of-4 t-break m-break">
     <h1 class="page-title">{{ page.category }}</h1>
+    <p>{{ page.discription }}</p>
+    <div class="slider-nav m-hidden t-hidden">
+    	<button type="button" class="slider-button prev">&lt;</button>
+    	<button type="button" class="slider-button next">&gt;</button>
+    </div>
+    
 </aside>
-<section class="is-2-of-3">
+<section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        <div class="slide panel-1"></div>
-        <div class="slide panel-2"></div>
-        <div class="slide panel-3"></div>
-        <div class="slide panel-4"></div>
-        <div class="slide panel-5"></div>
+        <div class="slide">
+        	<img src="/assets/images/film/slide-1.png">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/film/slide-2.png">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/film/slide-3.png">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/film/slide-4.png">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/film/slide-5.png">
+        </div>
     </div>
 </section>
 

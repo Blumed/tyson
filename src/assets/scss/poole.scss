@@ -215,7 +215,6 @@ blockquote {
 img {
   display: block;
   margin: 0 0 1rem;
-  border-radius: 5px;
 }
 
 /* Tables */
@@ -311,9 +310,9 @@ tbody tr:nth-child(odd) {
  * page is wrapped in `.page` and is only used on the page layout.
  */
 
-.page, .post {
-  margin-bottom: 4em;
-}
+// .page, .post {
+//   margin-bottom: 4em;
+// }
 
 /* Blog post or page title */
 
