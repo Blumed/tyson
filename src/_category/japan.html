@@ -2,6 +2,8 @@
 layout: page
 title: title
 category: japan
+page: true
+discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptas necessitatibus, laboriosam voluptate. Quis dignissimos minima exercitationem, earum inventore incidunt fugiat nesciunt ad necessitatibus, ipsa molestiae accusamus sapiente. Quo nostrum nihil, eveniet aut?
 img: http://placehold.it/226x226
 order: 6
 ---
@@ -9,3 +11,12 @@ order: 6
 	{{ page.title }}
 	{{ page.category }}
 </div>
+<aside class="is-1-of-4 t-break m-break">
+    <h1 class="page-title">{{ page.category }}</h1>
+    <p>{{ page.discription }}</p>
+    <div class="slider-nav m-hidden t-hidden">
+    	<button type="button" class="slider-button prev">&lt;</button>
+    	<button type="button" class="slider-button next">&gt;</button>
+    </div>
+    
+</aside>

@@ -5,7 +5,8 @@ title: Home
 <div class="container content">
     <section>
         <div class="blocks clear">
-            {% assign sorted = site.category | sort: 'order' %} {% for page in sorted %}
+            {% assign sorted = site.category | sort: 'order' %}
+             {% for page in sorted %}
             <a class="block" href="{{ page.url }}">
         {% if page.img %}
         <img class="thumbnail" src="{{ page.img }}" >
