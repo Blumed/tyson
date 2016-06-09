@@ -6,7 +6,7 @@ tagline: I'll shoot your face with my camera.
 url: localhost:3000
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
-source: src
+source: .
 destination: ./site
 
 # Same as the title etc for your site but can instead be
