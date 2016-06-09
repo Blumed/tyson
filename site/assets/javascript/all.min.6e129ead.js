@@ -1,0 +1,1 @@
+$(".sidebar-toggle").on("click",function(){$(this).toggleClass("active"),console.log("click")}),$(".block").hover(function(){$(this).toggleClass("is-active")});
