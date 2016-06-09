@@ -78,6 +78,19 @@ gulp.task("copy", function () {
     .pipe($.size({ title: "xml & txt" }))
 });
 
+//Copy over javascript vendor files
+gulp.task("javascript", function(){
+  return gulp.src("src/assets/javascript/vendor/**")
+    .pipe(gulp.dest("html/assets/javascript/vendor"))
+    .pipe($.size({ title: "javascript vendor"}));
+});
+
+gulp.task("javascriptScripts", function () {
+    return gulp.src("src/assets/javascript/**")
+    .pipe(gulp.dest("html/assets/javascript"))
+    .pipe($.size({ title: "javascriptScripts"}));
+});
+
 // Optimizes all the CSS, HTML and concats the JS etc
 gulp.task("html", ["styles"], function () {
   var assets = $.useref.assets({searchPath: "serve"});
@@ -171,5 +184,5 @@ gulp.task("build", ["jekyll:prod", "styles"], function () {});
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
 gulp.task("publish", ["build"], function () {
-  gulp.start("html", "copy", "images", "fonts");
+  gulp.start("html", "copy", "images", "fonts", "javascript", "javascriptScripts");
 });

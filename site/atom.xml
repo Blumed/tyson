@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Tyson Crocket</title>
- <link href="false/atom.xml" rel="self"/>
- <link href="false/"/>
- <updated>2016-06-08T20:53:28-05:00</updated>
- <id>false</id>
+ <link href="http://tysoncrockett.com/atom.xml" rel="self"/>
+ <link href="http://tysoncrockett.com/"/>
+ <updated>2016-06-08T22:13:52-05:00</updated>
+ <id>http://tysoncrockett.com</id>
  <author>
    <name>I am the man with the master plan.</name>
    <email>tyson.m.crockett@gmail.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Welcome to Jekyll!</title>
-   <link href="false/jekyll/2014/03/03/welcome-to-jekyll/"/>
+   <link href="http://tysoncrockett.com/jekyll/2014/03/03/welcome-to-jekyll/"/>
    <updated>2014-03-03T00:00:00-06:00</updated>
-   <id>false/jekyll/2014/03/03/welcome-to-jekyll</id>
+   <id>http://tysoncrockett.com/jekyll/2014/03/03/welcome-to-jekyll</id>
    <content type="html">&lt;p&gt;You&amp;rsquo;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build
 (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add
 a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention:
@@ -58,9 +58,9 @@ Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mo
  
  <entry>
    <title>Introducing Poole</title>
-   <link href="false/jekyll/poole/2014/03/02/introducing-poole/"/>
+   <link href="http://tysoncrockett.com/jekyll/poole/2014/03/02/introducing-poole/"/>
    <updated>2014-03-02T00:00:00-06:00</updated>
-   <id>false/jekyll/poole/2014/03/02/introducing-poole</id>
+   <id>http://tysoncrockett.com/jekyll/poole/2014/03/02/introducing-poole</id>
    <content type="html">&lt;p&gt;&lt;em&gt;The Strange Case of Dr. Jeykll and Mr. Hyde&lt;/em&gt; tells the story of a lawyer
 investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward
 Hyde. Chief among the novel&amp;rsquo;s supporting cast is a man by the name of Mr. Poole,
