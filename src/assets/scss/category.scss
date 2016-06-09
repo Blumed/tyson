@@ -1,0 +1,26 @@
+.page {
+	@xextend .clear;
+}
+aside {
+	@extend .is-left;
+	padding: 1rem;
+	.slider-nav {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		bottom: 0;
+	}
+}
+section {
+	@extend .is-left;
+	.slider {
+		.slide {
+			height: 100vh;
+			img {
+				width: 100%;
+				object-fit: cover;
+				height: 100%;
+			}
+		}
+	}
+}

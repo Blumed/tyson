@@ -1,0 +1,117 @@
+//colors
+$gray: #eff2f6;
+$pink: #efbba9;
+$blue: #4c76fe;
+$w: #fff;
+//Media Queries
+$desktop: "(min-width: 769px)";
+$tablet: "(min-width: 508px) and (max-width: 768px)";
+$phone: "(max-width: 507px)";
+//Text Alignment
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+//Floats
+.is-left {
+    float: left;
+}
+
+//Clearfix
+.clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+//Hide Element
+.hidden {
+    display: none;
+}
+
+//List Style None
+.no-style {
+    list-style: none;
+    padding: 0 2rem 0 0;
+}
+
+.is-full {
+    width: 100%;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.is-grouped {
+    @extend .clear;
+}
+
+.is-half {
+    @extend .is-left;
+    width: 49.5%;
+    &.-first {
+        margin-right: 1% !important;
+    }
+}
+
+.is-thirds {
+    @extend .is-left;
+    @extend .m-break;
+    width: 32.66%;
+    &.-mid {
+        margin: 0 1% !important;
+    }
+}
+
+.is-2-of-3 {
+    width: 60%;
+    display: inline-block;
+}
+
+.is-3-of-3 {
+    width: 40%;
+    display: inline-block;
+}
+
+.is-1-of-4 {
+    width: 25%;
+    display: inline-block;
+}
+
+.is-3-of-4 {
+    width: 75%;
+    display: inline-block;
+}
+
+@media #{$tablet} {
+    //Hidden on Mobile
+    .t-hidden {
+        display: none !important;
+    }
+    .t-break {
+        width: 100%;
+        display: block;
+    }
+}
+
+@media #{$phone} {
+    //Hidden on Mobile
+    .m-hidden {
+        display: none !important;
+    }
+    //Expand on Mobile
+    .m-break {
+        width: 100%;
+        display: block;
+    }
+}
