@@ -11,6 +11,7 @@ destination: ./site
 
 # Same as the title etc for your site but can instead be
 # called by using 'site.author.name' and so on
+version: 3.0.3
 author:
   name: I am the man with the master plan.
   email: tyson.m.crockett@gmail.com
