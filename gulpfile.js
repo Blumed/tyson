@@ -81,13 +81,13 @@ gulp.task("copy", function () {
 //Copy over javascript vendor files
 gulp.task("javascript", function(){
   return gulp.src("src/assets/javascript/vendor/**")
-    .pipe(gulp.dest("html/assets/javascript/vendor"))
+    .pipe(gulp.dest("site/assets/javascript/vendor"))
     .pipe($.size({ title: "javascript vendor"}));
 });
 
 gulp.task("javascriptScripts", function () {
     return gulp.src("src/assets/javascript/**")
-    .pipe(gulp.dest("html/assets/javascript"))
+    .pipe(gulp.dest("site/assets/javascript"))
     .pipe($.size({ title: "javascriptScripts"}));
 });
 
