@@ -1,3 +1,0 @@
-# Tyson
-
-[Describe the project.]
