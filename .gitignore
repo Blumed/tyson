@@ -53,6 +53,10 @@ tags
 node_modules/*
 .tmp
 test/
+.jshintrc
+.bowerrc
+.editconfig
+.gitattributes
 
 # Sublime
 *.sublime-project
@@ -63,6 +67,7 @@ app/_bower_components
 
 # Output folders
 serve
+src
 
 # hide the AWS and Rsync credentials file
 aws-credentials.json

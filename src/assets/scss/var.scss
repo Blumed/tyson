@@ -51,6 +51,14 @@ $phone: "(max-width: 507px)";
     display: block;
     margin-bottom: .5rem;
 }
+.tyson-portrait {
+    margin: 2rem;
+    img {
+        width: 70%;
+    margin: 0 auto;
+    }
+    
+}
 
 .is-grouped {
     @extend .clear;

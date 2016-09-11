@@ -1,11 +1,40 @@
 ---
 layout: page
 title: title
-category: portraits
+category: Portraits
+page: true
+discription: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptas necessitatibus, laboriosam voluptate. Quis dignissimos minima exercitationem, earum inventore incidunt fugiat nesciunt ad necessitatibus, ipsa molestiae accusamus sapiente. Quo nostrum nihil, eveniet aut?
 img: http://placehold.it/226x226
-order: 1
+order: 3
 ---
-<div>
-	{{ page.title }}
-	{{ page.category }}
-</div>
+<aside class="is-1-of-4 t-break m-break">
+    <h1 class="page-title">{{ page.category }}</h1>
+    <p>{{ page.discription }}</p>
+    <div class="slider-nav m-hidden t-hidden">
+    	<button type="button" class="slider-button prev">&lt;</button>
+    	<button type="button" class="slider-button next">&gt;</button>
+    </div>
+    
+</aside>
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        <div class="slide">
+        	<img src="/assets/images/portraits/CreepyBasementStudios_CanaPotter_September_2014_073.jpg" class="img editable">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/portraits/CreepyBasementStudios_Minneapolis_June_2015_8328.jpg" class="img editable">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/portraits/CreepyBasementStudios_StAnthony_August_2015_1232.jpg" class="img editable">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/portraits/Crockett_Bridget_June_2016_1471.jpg" class="img editable">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/portraits/Crockett_Nelson_2013_077.jpg" class="img editable">
+        </div>
+        <div class="slide">
+        	<img src="/assets/images/portraits/Crockett_Toussaint_July_2016_2039.jpg" class="img editable">
+        </div>
+    </div>
+</section>
