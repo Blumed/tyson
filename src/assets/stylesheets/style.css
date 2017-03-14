@@ -16,9 +16,10 @@ aside {
 section .slider .slide {
   height: 100vh; }
   section .slider .slide img {
+    max-width: 930px;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     height: 100%; }
 
 /* Slider */
@@ -918,7 +919,8 @@ section {
 
 /* Blog post or page title */
 .page-title {
-  color: #303030; }
+  color: #303030;
+  text-align: center; }
 
 .post-title {
   color: #303030; }
@@ -1163,6 +1165,7 @@ a.pagination-item:hover {
   left: 0;
   right: 0;
   width: 100%;
+  opacity: 0;
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -1187,14 +1190,14 @@ a.pagination-item:hover {
 nav {
   max-width: 22rem;
   margin: 0 auto;
-  font-size: 2.5rem; }
+  font-size: 2rem; }
 
 .sidebar-nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
 
 .sidebar-nav-item {
   display: block;
-  padding: .5rem 1rem;
+  padding: .2rem 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
   .sidebar-nav-item.active {
     text-decoration: none;
@@ -1216,11 +1219,11 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   position: absolute;
   z-index: 11;
   top: 1rem;
-  right: 1rem;
+  right: 2.5rem;
   display: block;
   width: 2.5rem;
   padding: .5rem .65rem;
-  background: url(img/icon_hamburger.svg) center center no-repeat rgba(255, 255, 255, 0.6);
+  background: url(../images/navigation-top/icon_hamburger.svg) center center no-repeat rgba(255, 255, 255, 0.6);
   background-size: 32px 32px;
   width: 4rem;
   height: 4rem;
@@ -1233,7 +1236,7 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.8);
-  background: url(img/icon_close.svg);
+  background: url(../images/navigation-top/icon_close.svg);
   width: 2.5rem;
   height: 2.5rem;
   display: block; }
@@ -1264,7 +1267,8 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   background-color: transparent;
   background-size: 32px 32px; }
   #sidebar-checkbox:checked + .sidebar {
-    visibility: visible; }
+    visibility: visible;
+    opacity: 1; }
 
 /*
   MEDIA QUERY
@@ -1329,7 +1333,6 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
         line-height: 32px;
         font-size: 20px; }
       .blocks .block .inner .page-sub-title {
-        text-transform: lowercase;
         letter-spacing: 1px;
         font: italic 400 25px/1.29 "adobe-caslon-pro", serif; }
       .blocks .block .inner hr {

@@ -50,5 +50,5 @@ gems:
  - jekyll-gist
 
 collections:
- category:
-  output: true
+  category:
+    output: true
