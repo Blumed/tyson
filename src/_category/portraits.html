@@ -6,68 +6,39 @@ page: true
 discription: I try to capture people for who they really are, not how they want to be seen.
 img: https://placehold.it/226x226
 order: 3
+image-slider:
+    - image-slider-path: /portraits/thumb_aleacullan_studio_crockett_2016.jpg
+    - image-slider-path: /portraits/thumb_bartender_chicago_crockett_2015.jpg
+    - image-slider-path: /portraits/thumb_bridget_studio_crocektt_2016.jpg
+    - image-slider-path: /portraits/thumb_cana_studio_crockett_2015.jpg
+    - image-slider-path: /portraits/thumb_cullan_studio_crockett_2015.jpg
+images:
+    - image-path: aleacullan_studio_crockett_2016.jpg
+    - image-path: bartender_chicago_crockett_2015.jpg
+    - image-path: bridget_studio_crocektt_2016.jpg
+    - image-path: cana_studio_crockett_2015.jpg
+    - image-path: cullan_studio_crockett_2015.jpg
+    - image-path: downing_glacier_crockett_2016.jpg
+    - image-path: erich_glacier_crockett_2016.jpg
+    - image-path: erick_studio_crockett_2016_2.jpg
+    - image-path: girlwithbike_minneapolis_crockett_2016.jpg
+    - image-path: jerry_minneapolis_crockett_2016.jpg
+    - image-path: larkin_minneapolis_crockett_2015.jpg
+    - image-path: laurence_québec_crockett_2015.jpg
+    - image-path: maggie_stpaul_crocektt_2016.jpg
+    - image-path: rittler_minneapolis_crockett_2016.jpg
+    - image-path: tyson_studio_crockett_2015.jpg
 ---
-<aside class="is-1-of-4 t-break m-break">
-    <h1 class="page-title">{{ page.category }}</h1>
-    <p>{{ page.discription }}</p>
-    <div class="slider-nav m-hidden t-hidden">
-    	<button type="button" class="slider-button prev">&lt;</button>
-    	<button type="button" class="slider-button next">&gt;</button>
-    </div>
-</aside>             
+
+{% include aside.html %}            
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        <div class="slide">
-            <img src="/assets/images/portraits/aleacullan_studio_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/bartender_chicago_crockett_2015.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/bridget_studio_crocektt_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/cana_studio_crockett_2015.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/cullan_studio_crockett_2015.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/downing_glacier_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/erich_glacier_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/erick_studio_crockett_2016_2.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/girlwithbike_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/jerry_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/larkin_minneapolis_crockett_2015.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/laurence_québec_crockett_2015.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/maggie_stpaul_crocektt_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/rittler_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/portraits/tyson_studio_crockett_2015.jpg">
+        <div class="slider">
+            {% for image in page.images %}
+                <div class="slide">
+                    <img src="/assets/images/portraits/{{ image.image-path }}">
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
-
-
-
-
-
-
-

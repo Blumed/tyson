@@ -6,62 +6,37 @@ page: true
 discription: It is an art, a lifestyle, and a basic need.
 img: https://placehold.it/226x226
 order: 3
+image-slider:
+    - image-slider-path: /skate/thumb_andyconrad_minneapolis_crockett_2016.jpg
+    - image-slider-path: /skate/thumb_bjmorrill_crockett_target_2016.jpg
+    - image-slider-path: /skate/thumb_bjmorrill_richmond_crockett_2016.jpg
+    - image-slider-path: /skate/thumb_bjmorrill_rockville_crockett_2016.jpg
+    - image-slider-path: /skate/thumb_cjtambornino_minneapolis_crockett_2016.jpg
+images:
+    - image-path: andyconrad_minneapolis_crockett_2016.jpg
+    - image-path: bjmorrill_richmond_crockett_2016.jpg
+    - image-path: bjmorrill_rockville_crockett_2016.jpg
+    - image-path: bjmorrill_target_crockett_2016.jpg
+    - image-path: cjtambornino_minneapolis_crockett_2016.jpg
+    - image-path: evanward_hiawatha_crockett_november_2016.jpg
+    - image-path: jamie_hiawatha_crockett_2016.jpg
+    - image-path: jayjensen_hiawatha_crockett_2016.jpg
+    - image-path: jayjensen_hiawatha_crockett_2017.jpg
+    - image-path: michelle_nekoosa_crockett_2016.jpg
+    - image-path: rickynunn_minneapolis_crockett_august_2016.jpg
+    - image-path: rittler_burnsville_crockett_2016.jpg
+    - image-path: rittler_minneapolis_crockett_2016.jpg
+    - image-path: tyler_diy_crockett_2016.jpg
+    - image-path: willboge_hiawatha_2016_crockett.jpg
 ---
-<aside class="is-1-of-4 t-break m-break">
-    <h1 class="page-title">{{ page.category }}</h1>
-    <p>{{ page.discription }}</p>
-    <div class="slider-nav m-hidden t-hidden">
-    	<button type="button" class="slider-button prev">&lt;</button>
-    	<button type="button" class="slider-button next">&gt;</button>
-    </div>
-</aside>
+
+{% include aside.html %}
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        <div class="slide">
-            <img src="/assets/images/skate/andyconrad_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/bjmorrill_richmond_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/bjmorrill_rockville_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/bjmorrill_target_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/cjtambornino_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/evanward_hiawatha_crockett_november_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/jamie_hiawatha_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/jayjensen_hiawatha_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/jayjensen_hiawatha_crockett_2017.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/michelle_nekoosa_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/rickynunn_minneapolis_crockett_august_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/rittler_burnsville_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/rittler_minneapolis_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/tyler_diy_crockett_2016.jpg">
-        </div>
-        <div class="slide">
-            <img src="/assets/images/skate/willboge_hiawatha_2016_crockett.jpg">
-        </div>
+        {% for image in page.images %}
+            <div class="slide">
+                <img src="/assets/images/skate/{{ image.image-path }}">
+            </div>
+        {% endfor %}
     </div>
 </section>
-

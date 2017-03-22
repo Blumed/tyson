@@ -6,62 +6,35 @@ category: Snow
 discription: The people are what make snowboarding special. I reject the “sport” aspect and embrace the freedom to travel down a mountain based on one’s beliefs of how it could be done, without the need of a score at the end. 
 img: https://placehold.it/226x226
 order: 4
+image-slider:
+    - image-slider-path: /snow/thumb_austin_trollhaugen_crockett_2016.jpg
+    - image-slider-path: /snow/thumb_austin_trollhaugen_crockett_2017.jpg
+    - image-slider-path: /snow/thumb_dan_hyland_crockett_2017.jpg
+    - image-slider-path: /snow/thumb_erich_buckhill_crockett_2015.jpg
+    - image-slider-path: /snow/thumb_erich_tahoe_crockett_2013.jpg
+images:
+    - image-path: Dan_Hyland_Crockett_2017.jpg
+    - image-path: austin_trollhaugen_crockett_2016.jpg
+    - image-path: austin_trollhaugen_crockett_2017.jpg
+    - image-path: erich_buckhill_crockett_2015.jpg
+    - image-path: erich_tahoe_crockett_2013.jpg
+    - image-path: jake_elmcreek_crockett_2016.jpg
+    - image-path: jason_trollhaugen_crockett_2013.jpg
+    - image-path: kyle_trollhaugen_crockett_2016.jpg
+    - image-path: nick_alaska_crockett_2016.jpg
+    - image-path: nick_mammoth_crockett_2012.jpg
+    - image-path: shane_trollhaugen_crockett_2014.jpg
+    - image-path: sherman_breck_crockett_2008.jpg
+    - image-path: sy_keystone_crockett_2012.jpg
 ---
-<aside class="is-1-of-4 t-break m-break">
-    <h1 class="page-title">{{ page.category }}</h1>
-    <p>{{ page.discription }}</p>
-    <div class="slider-nav m-hidden t-hidden">
-    	<button type="button" class="slider-button prev">&lt;</button>
-    	<button type="button" class="slider-button next">&gt;</button>
-    </div>
-    
-</aside>	
+
+{% include aside.html %}	
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        <div class="slide">
-        	<img src="/assets/images/snow/Dan_Hyland_Crockett_2017.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/austin_trollhaugen_crockett_2016.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/austin_trollhaugen_crockett_2017.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/erich_buckhill_crockett_2015.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/erich_tahoe_crockett_2013.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/jake_elmcreek_crockett_2016.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/jason_trollhaugen_crockett_2013.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/kyle_trollhaugen_crockett_2016.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/nick_alaska_crockett_2016.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/nick_mammoth_crockett_2012.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/shane_trollhaugen_crockett_2014.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/sherman_breck_crockett_2008.jpg">
-        </div>
-                <div class="slide">
-        	<img src="/assets/images/snow/sy_keystone_crockett_2012.jpg">
-        </div>
+        {% for image in page.images %}
+            <div class="slide">
+                <img src="/assets/images/snow/{{ image.image-path }}">
+            </div>
+        {% endfor %}
     </div>
 </section>
-
-
-
-
-
-

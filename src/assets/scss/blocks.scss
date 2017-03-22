@@ -28,12 +28,20 @@
             border-radius: 0;
             position: absolute;
             width: 100%;
+            height: 100%;
             opacity: 0;
-            //max-height: 426px;
+            &.current {
+                z-index: 2 !important;
+            }
+        }
+        &:hover img {
+            opacity: 1;
+            z-index: 1
         }
         .inner {
             opacity: 1;
             position: absolute;
+            z-index: 2;
             left: 50%;
             top: 50%;
             margin: 0;

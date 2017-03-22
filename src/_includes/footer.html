@@ -10,7 +10,9 @@
     <script src="/assets/javascript/vendor/jquery/jquery.2.1.4.min.js"></script>
     <!--<![endif]-->
     <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    {% if page.title == "Home" %}
+    <script src="/assets/javascript/slideshow.js"></script>
+    {% endif %}
     {% if page.page  == true %}
     <script src="/assets/javascript/vendor/slick/slick.min.js"></script>
     <script src="/assets/javascript/slick.js"></script>
