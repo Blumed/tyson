@@ -6,17 +6,14 @@ title: Home
     <section>
         <div class="blocks clear">
             {% assign sorted = site.category | sort: 'order' %}
-             {% for page in sorted %}
-            <a class="block" href="{{ page.url }}">
-        {% for image in page.image-slider %}
-            <img src="/assets/images/thumbs{{ image.image-slider-path }}">
-        {% endfor %}
-        <!--{% if page.img %}
-        <img class="thumbnail" src="{{ page.img }}" >
-         {% else %}
-        <div class="thumbnail defualt"></div>
-        {% endif %}-->
-            <div class="inner">
+            {% for page in sorted %}
+                <a class="block" href="{{ page.url }}">
+                    {% for image in site.static_files %}
+                        {% if image.path contains page.image-slider-path %}
+                            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                        {% endif %}
+                    {% endfor %}
+                    <div class="inner">
                 <h4 class="page-sub-title">{{ page.category }}</h4>
             </div>
         </a> {% endfor %}

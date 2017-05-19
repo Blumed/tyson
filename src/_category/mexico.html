@@ -6,39 +6,19 @@ page: true
 discription: The people of Mexico are Mexico. These images cover the people and animals of the states of Oaxaca, Nayarit, Jalisco, and Yucatán.
 img: https://placehold.it/226x226
 order: 6
-image-slider:
-    - image-slider-path: /mexico/thumb_churchwoman_merida_crockett_2014.jpg
-    - image-slider-path: /mexico/thumb_coupleoncurb_oaxaca_crockett_2015.jpg
-    - image-slider-path: /mexico/thumb_eagle_holbox_crockett_2014.jpg
-    - image-slider-path: /mexico/thumb_farmer_oaxaca_crockett_2015.jpg
-    - image-slider-path: /mexico/thumb_friends_merida_crockett_2014.jpg
-images:
-    - image-path: churchwoman_merida_crockett_2014.jpg
-    - image-path: girl_holbox_crockett_2014.jpg
-    - image-path: manonbike_merida_crockett_2014.jpg
-    - image-path: scooter_holbox_crockett_2014.jpg
-    - image-path: coupleoncurb_oaxaca_crockett_2015.jpg
-    - image-path: girlatstand_oaxaca_crockett_2015.jpg
-    - image-path: mansmoking_oaxaca_crockett_2015.jpg
-    - image-path: wedding_merida_crockett_2014.jpg
-    - image-path: eagle_holbox_crockett_2014.jpg
-    - image-path: girlonbike_oaxaca_crockett_2015.jpg
-    - image-path: market_oaxaca_crockett_2015.jpg
-    - image-path: farmer_oaxaca_crockett_2015.jpg
-    - image-path: lizard_holbox_crockett_2014.jpg
-    - image-path: menonbench_oaxaca_crockett_2015.jpg
-    - image-path: friends_merida_crockett_2014.jpg
-    - image-path: machineshop_oaxaca_crockett_2015.jpg
-    - image-path: racoon_holbox_crockett_2014.jpg
+image-slider-path: assets/images/thumbs/mexico
+
 ---
 
 {% include aside.html %}
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        {% for image in page.images %}
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/mexico' %}
             <div class="slide">
-                <img src="/assets/images/locations/mexico/{{ image.image-path }}">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
             </div>
+            {% endif %}
         {% endfor %}
     </div>
 </section>

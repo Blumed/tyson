@@ -2,9 +2,6 @@
 /* 
 The main SCSS file for everything, yep
 */
-.page {
-  @xextend .clear; }
-
 aside {
   padding: 1rem; }
   aside .slider-nav {
@@ -21,6 +18,10 @@ section .slider .slide {
     -o-object-fit: contain;
        object-fit: contain;
     height: 100%; }
+
+@media (max-width: 768px) {
+  section .slider .slide {
+    height: auto; } }
 
 /* Slider */
 .slick-slider {

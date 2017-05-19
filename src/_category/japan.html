@@ -6,32 +6,19 @@ page: true
 discription: It is nearly impossible to capture thousands of years of culture within a couple of images. This collection is intended to reflect the honor and precise nature of Japan as it clashes with the modern world economy
 img: https://placehold.it/226x226
 order: 6
-image-slider:
-    - image-slider-path: /japan/thumb_alley_sapparo_crockett_2015.jpg
-    - image-slider-path: /japan/thumb_chopsticks_hokkadio_crockett_2015.jpg
-    - image-slider-path: /japan/thumb_couple_sapporo_crockett_2015.jpg
-    - image-slider-path: /japan/thumb_diner_sapparo_crockett_2015.jpg
-    - image-slider-path: /japan/thumb_finger_hokkaido_crockett_2014.jpg
-images:
-    - image-path: alley_sapparo_crockett_2015.jpg
-    - image-path: diner_sapparo_crockett_2015.jpg
-    - image-path: oldman_hokkaido_crocektt_2015.jpg
-    - image-path: worker_sapporo_crockett_2015.jpg
-    - image-path: chopsticks_hokkadio_crockett_2015.jpg
-    - image-path: finger_hokkaido_crockett_2014.jpg
-    - image-path: smoking_sapporo_crockett_2015.jpg
-    - image-path: couple_sapporo_crockett_2015.jpg
-    - image-path: middlefinger_sapporro_crockett_2015.jpg
-    - image-path: suki_sapporro_crockett_2015.jpg
+image-slider-path: assets/images/thumbs/japan
+
 ---
 
 {% include aside.html %}		
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        {% for image in page.images %}
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/japan' %}
             <div class="slide">
-                <img src="/assets/images/locations/japan/{{ image.image-path }}">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
             </div>
+            {% endif %}
         {% endfor %}
     </div>
 </section>

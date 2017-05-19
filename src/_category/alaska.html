@@ -5,30 +5,20 @@ category: Alaska
 page: true
 discription: One of the last places in the western world that allows a glimpse into the past, Alaska speaks for itself.
 order: 6
-image-slider:
-    - image-slider-path: /alaska/thumb_denali_denali_crockett_2010.jpg
-    - image-slider-path: /alaska/thumb_denali_goat_crockett_2010.jpg
-    - image-slider-path: /alaska/thumb_denali_mountain_crockett_2010.jpg
-    - image-slider-path: /alaska/thumb_hilltop_alaska_crockett_2016.jpg
-    - image-slider-path: /alaska/thumb_kenai_glaciers_crockett_2010.jpg
-images:
-    - image-path: denali_denali_crockett_2010.jpg
-    - image-path: denali_goat_crockett_2010.jpg
-    - image-path: denali_mountain_crockett_2010.jpg
-    - image-path: hilltop_alaska_crockett_2016.jpg
-    - image-path: kenai_glaciers_crockett_2010.jpg
-    - image-path: kenai_seals_crockett_2010.jpg
-    - image-path: kenai_whale_crockett_2010.jpg
-    - image-path: tincan_alaska_crockett_2016.jpg
+image-slider-path: assets/images/thumbs/alaska
+
 ---
 
 {% include aside.html %}
 <section class="is-3-of-4 t-break m-break">
     <div class="slider">
-        {% for image in page.images %}
-        <div class="slide">
-            <img src="/assets/images/locations/alaska/{{ image.image-path }}">
-        </div>
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/alaska' %}
+            <div class="slide">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+            </div>
+
+            {% endif %}
         {% endfor %}
     </div>
 </section>
