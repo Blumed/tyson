@@ -1174,7 +1174,6 @@ a.pagination-item:hover {
   /* 15px */
   color: rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.8);
-  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
   .sidebar a {
     font-weight: normal;
@@ -1260,7 +1259,7 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   backface-visibility: hidden; }
 
 .wrap, .sidebar-toggle {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out; }
 
 #sidebar-checkbox:checked {
@@ -1330,8 +1329,8 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
       margin: 0;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-              transition: opacity 0.35s, transform 0.35s;
+      transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
       width: 9rem; }
       .blocks .block .inner > * {
         color: black; }
