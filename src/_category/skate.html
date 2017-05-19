@@ -1,0 +1,24 @@
+---
+layout: page
+title: Skateboarding
+category: Skate
+page: true
+discription: It is an art, a lifestyle, and a basic need.
+img: https://placehold.it/226x226
+order: 3
+image-slider-path: assets/images/thumbs/skate
+
+---
+
+{% include aside.html %}
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/skate' %}
+            <div class="slide">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

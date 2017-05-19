@@ -1,0 +1,25 @@
+---
+layout: page
+title: Mexico
+category: Mexico
+page: true
+discription: The people of Mexico are Mexico. These images cover the people and animals of the states of Oaxaca, Nayarit, Jalisco, and Yucatán.
+img: https://placehold.it/226x226
+order: 6
+image-slider-path: assets/images/thumbs/mexico
+
+---
+
+{% include aside.html %}
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/mexico' %}
+            <div class="slide">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+

@@ -1,0 +1,25 @@
+---
+layout: page
+title: Japan
+category: Japan
+page: true
+discription: It is nearly impossible to capture thousands of years of culture within a couple of images. This collection is intended to reflect the honor and precise nature of Japan as it clashes with the modern world economy
+img: https://placehold.it/226x226
+order: 6
+image-slider-path: assets/images/thumbs/japan
+
+---
+
+{% include aside.html %}		
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/japan' %}
+            <div class="slide">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+

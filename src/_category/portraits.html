@@ -1,0 +1,26 @@
+---
+layout: page
+title: Portraits
+category: Portraits
+page: true
+discription: I try to capture people for who they really are, not how they want to be seen.
+img: https://placehold.it/226x226
+order: 3
+image-slider-path: assets/images/thumbs/portraits
+
+---
+
+{% include aside.html %}            
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        <div class="slider">
+            {% for image in site.static_files %}
+                {% if image.path contains 'assets/images/portraits' %}
+                    <div class="slide">
+                        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                    </div>
+                {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</section>

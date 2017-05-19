@@ -1,0 +1,24 @@
+---
+layout: page
+title: Snow
+page: true
+category: Snow
+discription: The people are what make snowboarding special. I reject the “sport” aspect and embrace the freedom to travel down a mountain based on one’s beliefs of how it could be done, without the need of a score at the end. 
+img: https://placehold.it/226x226
+order: 4
+image-slider-path: assets/images/thumbs/snow
+
+---
+
+{% include aside.html %}	
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/snow' %}
+                <div class="slide">
+                    <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>

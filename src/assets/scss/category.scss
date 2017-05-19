@@ -1,0 +1,30 @@
+aside {
+	@extend .is-left;
+	padding: 1rem;
+	.slider-nav {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		bottom: 0;
+	}
+}
+section {
+	@extend .is-left;
+	.slider {
+		.slide {
+			height: 100vh;
+			img {
+				max-width: 930px;
+				width: 100%;
+				object-fit: contain;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	section .slider .slide {
+		height: auto;
+	}
+}

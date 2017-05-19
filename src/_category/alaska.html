@@ -1,0 +1,24 @@
+---
+layout: page
+title: Alaska
+category: Alaska
+page: true
+discription: One of the last places in the western world that allows a glimpse into the past, Alaska speaks for itself.
+order: 6
+image-slider-path: assets/images/thumbs/alaska
+
+---
+
+{% include aside.html %}
+<section class="is-3-of-4 t-break m-break">
+    <div class="slider">
+        {% for image in site.static_files %}
+            {% if image.path contains 'assets/images/locations/alaska' %}
+            <div class="slide">
+                <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+            </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
