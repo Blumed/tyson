@@ -1221,25 +1221,32 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
   top: 1rem;
   right: 2.5rem;
   display: block;
-  width: 2.5rem;
-  padding: .5rem .65rem;
-  background: url(../images/static/icons/icon_hamburger.svg) center center no-repeat rgba(255, 255, 255, 0.6);
-  background-size: 32px 32px;
-  width: 4rem;
-  height: 4rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 2rem;
+  height: 2rem;
   cursor: pointer; }
+  .sidebar-toggle svg {
+    width: 100%;
+    transition: all .3s ease-in-out; }
   .sidebar-toggle:active {
     color: #fff; }
   .sidebar-toggle:checked {
     background: red; }
 
+#navicon g > * {
+  transition: all .3s ease-in-out; }
+
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.8);
-  background: url(../images/static/icons/icon_close.svg);
-  width: 2.5rem;
-  height: 2.5rem;
   display: block; }
+  #sidebar-checkbox:checked ~ .sidebar-toggle #navicon .line1 {
+    -webkit-transform: translate(0, 14px) rotate(-45deg);
+            transform: translate(0, 14px) rotate(-45deg); }
+  #sidebar-checkbox:checked ~ .sidebar-toggle #navicon .line2 {
+    -webkit-transform: translate(34px, 0);
+            transform: translate(34px, 0); }
+  #sidebar-checkbox:checked ~ .sidebar-toggle #navicon .line3 {
+    -webkit-transform: translate(16px, 0) rotate(45deg);
+            transform: translate(16px, 0) rotate(45deg); }
 
 /* Slide effect
  *
@@ -1320,6 +1327,8 @@ a.sidebar-nav-item:hover, a.sidebar-nav-item:focus {
     .blocks .block:hover img {
       opacity: 1;
       z-index: 1; }
+    .blocks .block img.current {
+      opacity: 1; }
     .blocks .block .inner {
       opacity: 1;
       position: absolute;

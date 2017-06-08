@@ -1,5 +1,4 @@
-var $block = $('.block');
-$block.hover(function () {
+$('.block').hover(function () {
 	var $isActive = $(this);
 	$isActive.toggleClass('is-active');
     console.log('on');

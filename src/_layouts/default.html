@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include sidebar.html %}
+  {% include sidebar.html %}
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+  <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-     <!--  <div class="masthead">
+  <div class="wrap">
+    <!--  <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
             <a href="/" title="Home">{{ site.title }}</a>
@@ -19,11 +19,22 @@
         </div>
       </div> -->
 
-        {{ content }}
-    </div>
+    {{ content }}
+  </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-    {% include footer.html %}
+  <label for="sidebar-checkbox" class="sidebar-toggle">
+      <?xml version="1.0" encoding="utf-8"?>
+      <!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <svg version="1.1" id="navicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="-16 -1 32 32" enable-background="new -16 -1 32 32" xml:space="preserve">
+        <g>
+          <rect class="line1" x="-15" y="0" fill="#000000" width="30" height="3"/>
+          <rect class="line2" x="-15" y="10" fill="#000000" width="30" height="3"/>
+          <rect class="line3" x="-15" y="20" fill="#000000" width="30" height="3"/>
+        </g>
+      </svg>
+    </label> {% include footer.html %}
 
-  </body>
+</body>
+
 </html>

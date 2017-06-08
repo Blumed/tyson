@@ -35,8 +35,6 @@
   left:0;
   right:0;
   width:100%;
-  //left: -14rem;
-  //width: 14rem;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -110,32 +108,48 @@ a.sidebar-nav-item {
   top: 1rem;
   right: 2.5rem;
   display: block;
-  width: 2.5rem;
-  padding: .5rem .65rem;
-  background: url(../images/static/icons/icon_hamburger.svg) center center no-repeat rgba(255, 255, 255, .6);
-  background-size: 32px 32px;
-  width: 4rem;
-  height: 4rem;
-  //background-color: #fff;
+  background-color: rgba(255, 255, 255, .6);
+ // padding: .5rem .65rem;
+ // background: url(../images/static/icons/icon_hamburger.svg) center 20px no-repeat rgba(255, 255, 255, .6);
+  //background-size: 32px 32px;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
+  svg {
+    width: 100%;
+    transition: all .3s ease-in-out;
+  }
   &:active {
     color: #fff;
-    //background-color: #505050;
   }
   &:checked {
     background: red;
   }
 }
-
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: #fff;
+  #navicon {
+    g > * {
+      transition: all .3s ease-in-out;
+    }
+  }
+#sidebar-checkbox:checked~.sidebar-toggle {
+  #navicon {
+    .line1 {
+      transform: translate(0, 14px) rotate(-45deg);
+    }
+    //x="-15" y="10"
+    .line2 {
+      transform: translate(34px, 0);
+    }
+    .line3 {
+      transform: translate(16px, 0) rotate(45deg);
+    }
+  } //color: #fff;
   //background-color: #505050;
-  background-color: rgba(255, 255, 255, .8);
-  background: url(../images/static/icons/icon_close.svg);
-  width:2.5rem;
-  height:2.5rem;
+  //background-color: rgba(255, 255, 255, .8);
+  //background: url(../images/static/icons/icon_close.svg);
   display: block;
 }
+
 
 
 /* Slide effect
